@@ -1,0 +1,31 @@
+<h1>List of all movies</h1>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Images</th>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Director</th>
+    <th></th>
+  </tr>
+
+
+
+
+
+
+<% Movie.all.each do |a_movie| %>
+
+
+  <tr>
+    <td><%= a_movie.id%></td>
+    <td><img src="<%= a_movie.image %>" width="50"></td>
+    <td><%= a_movie.title%></td>
+    <td><%= a_movie.year%>/<td>
+    <td><%= a_movie.director_id%></td>
+    <td></td>
+  </tr>
+<% end %>
+
+</table>
